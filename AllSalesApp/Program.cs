@@ -17,7 +17,7 @@ namespace AllSalesApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pedidos());
+            Application.Run(new Menu());
         }
     }
 }
