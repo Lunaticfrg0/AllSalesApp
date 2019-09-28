@@ -1,4 +1,6 @@
-﻿namespace AllSalesApp.Views
+﻿using System;
+
+namespace AllSalesApp.Views
 {
     partial class Pedidos
     {
@@ -31,15 +33,18 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.Buscarbtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.allSalesAppDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.allSalesAppDataSet = new AllSalesApp.AllSalesAppDataSet();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Cancelar = new System.Windows.Forms.Button();
             this.HacerPedidobtn = new System.Windows.Forms.Button();
-            this.allSalesAppDataSet = new AllSalesApp.AllSalesAppDataSet();
-            this.allSalesAppDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allSalesAppDataSet)).BeginInit();
+            this.PedidosListView = new System.Windows.Forms.ListView();
+            this.NombreHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.PrecioHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.allSalesAppDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allSalesAppDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,20 +69,15 @@
             this.Buscarbtn.UseVisualStyleBackColor = true;
             this.Buscarbtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridView1
+            // allSalesAppDataSetBindingSource
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.allSalesAppDataSetBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(39, 91);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(723, 233);
-            this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.allSalesAppDataSetBindingSource.DataSource = this.allSalesAppDataSet;
+            this.allSalesAppDataSetBindingSource.Position = 0;
+            // 
+            // allSalesAppDataSet
+            // 
+            this.allSalesAppDataSet.DataSetName = "AllSalesAppDataSet";
+            this.allSalesAppDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // comboBox1
             // 
@@ -110,15 +110,39 @@
             this.HacerPedidobtn.UseVisualStyleBackColor = true;
             this.HacerPedidobtn.Click += new System.EventHandler(this.button3_Click);
             // 
-            // allSalesAppDataSet
+            // PedidosListView
             // 
-            this.allSalesAppDataSet.DataSetName = "AllSalesAppDataSet";
-            this.allSalesAppDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.PedidosListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.NombreHeader1,
+            this.PrecioHeader1});
+            this.PedidosListView.HideSelection = false;
+            this.PedidosListView.Location = new System.Drawing.Point(12, 85);
+            this.PedidosListView.Name = "PedidosListView";
+            this.PedidosListView.Size = new System.Drawing.Size(173, 180);
+            this.PedidosListView.TabIndex = 7;
+            this.PedidosListView.UseCompatibleStateImageBehavior = false;
+            this.PedidosListView.View = System.Windows.Forms.View.Details;
+            this.PedidosListView.SelectedIndexChanged += new System.EventHandler(this.PedidosListView_SelectedIndexChanged);
             // 
-            // allSalesAppDataSetBindingSource
+            // NombreHeader1
             // 
-            this.allSalesAppDataSetBindingSource.DataSource = this.allSalesAppDataSet;
-            this.allSalesAppDataSetBindingSource.Position = 0;
+            this.NombreHeader1.Text = "Nombre Producto";
+            this.NombreHeader1.Width = 250;
+            // 
+            // PrecioHeader1
+            // 
+            this.PrecioHeader1.Text = "Precio";
+            this.PrecioHeader1.Width = 83;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(232, 140);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(486, 180);
+            this.dataGridView1.TabIndex = 8;
             // 
             // Pedidos
             // 
@@ -127,33 +151,39 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.PedidosListView);
             this.Controls.Add(this.HacerPedidobtn);
             this.Controls.Add(this.Cancelar);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Buscarbtn);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Pedidos";
             this.Text = "Pedidos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.allSalesAppDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.allSalesAppDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allSalesAppDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
+      
+
         #endregion
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Buscarbtn;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button Cancelar;
         private System.Windows.Forms.Button HacerPedidobtn;
         private System.Windows.Forms.BindingSource allSalesAppDataSetBindingSource;
         private AllSalesAppDataSet allSalesAppDataSet;
+        private System.Windows.Forms.ListView PedidosListView;
+        private System.Windows.Forms.ColumnHeader NombreHeader1;
+        private System.Windows.Forms.ColumnHeader PrecioHeader1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
