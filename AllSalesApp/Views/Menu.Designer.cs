@@ -32,6 +32,7 @@
             this.pedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.catalogoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,11 +45,12 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pedidoToolStripMenuItem,
             this.facturaToolStripMenuItem,
-            this.catalogoToolStripMenuItem});
+            this.catalogoToolStripMenuItem,
+            this.crearClienteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(124, 404);
+            this.menuStrip1.Size = new System.Drawing.Size(124, 335);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -76,11 +78,18 @@
             this.catalogoToolStripMenuItem.Size = new System.Drawing.Size(157, 24);
             this.catalogoToolStripMenuItem.Text = "Catalogo";
             // 
+            // crearClienteToolStripMenuItem
+            // 
+            this.crearClienteToolStripMenuItem.Name = "crearClienteToolStripMenuItem";
+            this.crearClienteToolStripMenuItem.Size = new System.Drawing.Size(119, 23);
+            this.crearClienteToolStripMenuItem.Text = "Crear Cliente";
+            this.crearClienteToolStripMenuItem.Click += new System.EventHandler(this.crearClienteToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 404);
+            this.ClientSize = new System.Drawing.Size(610, 335);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -99,6 +108,7 @@
         private System.Windows.Forms.ToolStripMenuItem pedidoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem catalogoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearClienteToolStripMenuItem;
     }
 }
 

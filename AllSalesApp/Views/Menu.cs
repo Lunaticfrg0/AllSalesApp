@@ -39,5 +39,12 @@ namespace AllSalesApp
             child.MdiParent = this;
             child.Show();
         }
+
+        private void crearClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CrearCliente child = new CrearCliente();
+            child.MdiParent = this;
+            child.Show();
+        }
     }
 }

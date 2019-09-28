@@ -1,0 +1,124 @@
+﻿namespace AllSalesApp.Views
+{
+    partial class LogIn
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Cedulatxt = new System.Windows.Forms.TextBox();
+            this.Passwordtxt = new System.Windows.Forms.TextBox();
+            this.Exitbtn = new System.Windows.Forms.Button();
+            this.LogInbtn = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(80, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cedula:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(80, 170);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 32);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Contraseña:";
+            // 
+            // Cedulatxt
+            // 
+            this.Cedulatxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cedulatxt.Location = new System.Drawing.Point(285, 94);
+            this.Cedulatxt.Name = "Cedulatxt";
+            this.Cedulatxt.Size = new System.Drawing.Size(265, 34);
+            this.Cedulatxt.TabIndex = 2;
+            // 
+            // Passwordtxt
+            // 
+            this.Passwordtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Passwordtxt.Location = new System.Drawing.Point(285, 170);
+            this.Passwordtxt.Name = "Passwordtxt";
+            this.Passwordtxt.Size = new System.Drawing.Size(265, 34);
+            this.Passwordtxt.TabIndex = 3;
+            // 
+            // Exitbtn
+            // 
+            this.Exitbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exitbtn.Location = new System.Drawing.Point(130, 290);
+            this.Exitbtn.Name = "Exitbtn";
+            this.Exitbtn.Size = new System.Drawing.Size(110, 39);
+            this.Exitbtn.TabIndex = 4;
+            this.Exitbtn.Text = "Salir";
+            this.Exitbtn.UseVisualStyleBackColor = true;
+            // 
+            // LogInbtn
+            // 
+            this.LogInbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogInbtn.Location = new System.Drawing.Point(393, 290);
+            this.LogInbtn.Name = "LogInbtn";
+            this.LogInbtn.Size = new System.Drawing.Size(110, 39);
+            this.LogInbtn.TabIndex = 5;
+            this.LogInbtn.Text = "Log In";
+            this.LogInbtn.UseVisualStyleBackColor = true;
+            this.LogInbtn.Click += new System.EventHandler(this.LogInbtn_Click);
+            // 
+            // LogIn
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(634, 393);
+            this.Controls.Add(this.LogInbtn);
+            this.Controls.Add(this.Exitbtn);
+            this.Controls.Add(this.Passwordtxt);
+            this.Controls.Add(this.Cedulatxt);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Name = "LogIn";
+            this.Text = "Log In";
+            this.Load += new System.EventHandler(this.LogIn_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox Cedulatxt;
+        private System.Windows.Forms.TextBox Passwordtxt;
+        private System.Windows.Forms.Button Exitbtn;
+        private System.Windows.Forms.Button LogInbtn;
+    }
+}

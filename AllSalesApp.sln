@@ -5,6 +5,19 @@ VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllSalesApp", "AllSalesApp\AllSalesApp.csproj", "{DB4311B3-D07A-4A59-A0E8-7CDF4A5E16B1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4C82BE88-CBFC-4A2E-935A-762977EA046D}"
+	ProjectSection(SolutionItems) = preProject
+		AllSalesApp\Views\CrearCliente.cs = AllSalesApp\Views\CrearCliente.cs
+		AllSalesApp\Views\CrearCliente.Designer.cs = AllSalesApp\Views\CrearCliente.Designer.cs
+		AllSalesApp\Views\CrearCliente.resx = AllSalesApp\Views\CrearCliente.resx
+		AllSalesApp\Views\Form1.cs = AllSalesApp\Views\Form1.cs
+		AllSalesApp\Views\Form1.Designer.cs = AllSalesApp\Views\Form1.Designer.cs
+		AllSalesApp\Views\Form1.resx = AllSalesApp\Views\Form1.resx
+		AllSalesApp\Views\LogIn.cs = AllSalesApp\Views\LogIn.cs
+		AllSalesApp\Views\LogIn.Designer.cs = AllSalesApp\Views\LogIn.Designer.cs
+		AllSalesApp\Views\LogIn.resx = AllSalesApp\Views\LogIn.resx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

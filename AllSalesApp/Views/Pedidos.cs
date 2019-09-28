@@ -184,6 +184,18 @@ namespace AllSalesApp.Views
         {
             using (SqlConnection connection = new SqlConnection(connstring))
             {
+                string NCliente = comboBox1.SelectedItem.ToString();
+                int idcliente;
+                var query0 = "SELECT TOP 1 IDCliente FROM tblCliente WHERE NombreCliente=@nombrecliente";
+
+                using (var cmd = new SqlCommand(query0, connection))
+                {
+                    connection.Open();
+                    cmd.Parameters.AddWithValue("@nombrecliente", NCliente);
+                    idcliente = (int)cmd.ExecuteScalar();
+                    connection.Close();
+                }
+
                 int idpedidoh;
 
                 //Se Crea el header
@@ -192,7 +204,7 @@ namespace AllSalesApp.Views
                 using (SqlCommand command = new SqlCommand(query1, connection))
                 {
                     command.Parameters.AddWithValue("@idvendedor", 1);
-                    command.Parameters.AddWithValue("@idcliente", 1);
+                    command.Parameters.AddWithValue("@idcliente", idcliente);
 
                     connection.Open();
                     int result = command.ExecuteNonQuery();
@@ -204,7 +216,6 @@ namespace AllSalesApp.Views
                 }
                 var obtencion = "SELECT TOP 1 IDPedidoH FROM tblPedidoH ORDER BY IDPedidoH DESC";
 
-                SqlDataReader readerobt = null;
                 using (var cmd = new SqlCommand(obtencion, connection))
                 {
                     connection.Open();
@@ -219,8 +230,6 @@ namespace AllSalesApp.Views
                     int idprodctod;
                     
                     var query2 = "SELECT TOP 1 IDProductoD FROM tblProductoD WHERE NombreProducto = @nombreproducto";
-
-                    SqlDataReader reader = null;
                     using (var cmd = new SqlCommand(query2, connection))
                     {
                         connection.Open();

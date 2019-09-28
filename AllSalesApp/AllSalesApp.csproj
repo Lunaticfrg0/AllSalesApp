@@ -52,11 +52,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AllSalesAppDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Entities\LogInVendedor.cs" />
+    <Compile Include="Services\LogInServices.cs" />
+    <Compile Include="Services\Repository.cs" />
+    <Compile Include="Utilities\ComboxManager.cs" />
+    <Compile Include="Views\CrearCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CrearCliente.Designer.cs">
+      <DependentUpon>CrearCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,8 +82,14 @@
     <Compile Include="Views\Pedidos.Designer.cs">
       <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\CrearCliente.resx">
+      <DependentUpon>CrearCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
