@@ -13,14 +13,19 @@ namespace AllSalesApp.Views
 {
     public partial class Pedidos : Form
     {
-        public Pedidos()
+        public int IDProductoHeader;
+        public int IDVendedor;
+        public int IDTienda;
+        public Pedidos(int idvendedor, int idtienda)
         {
             InitializeComponent();
             ListarClientes();
+            IDVendedor = idvendedor;
+            IDTienda = idtienda;
+            ObtenerIDHeader();
             LoadProducts();
         }
-        public string connstring = @"Server=localhost;Data Source=DESKTOP-US09U7O\SQLEXPRESS;Database=AllSalesApp;Integrated Security=SSPI";
-
+        public string connstring = @"Server=localhost;Data Source=LAPTOP-RS890769\SQLEXPRESS;Database=AllSalesApp;Integrated Security=SSPI";
         private void ListarClientes()
         {
             SqlDataReader dr;
@@ -36,6 +41,23 @@ namespace AllSalesApp.Views
             }
             con.Close();
         }
+        public void ObtenerIDHeader()
+        {
+            using (SqlConnection connection = new SqlConnection(connstring))
+            {
+                int idph;
+                var query0 = "SELECT TOP 1 IDProductoH FROM tblProductoH WHERE IDTienda=@idtienda";
+
+                using (var cmd = new SqlCommand(query0, connection))
+                {
+                    connection.Open();
+                    cmd.Parameters.AddWithValue("@idtienda", IDTienda);
+                    idph = (int)cmd.ExecuteScalar();
+                    connection.Close();
+                }
+                IDProductoHeader = idph;
+            }
+        }
         private void LoadProducts()
         {
             dataGridView2.Visible = false;
@@ -44,11 +66,12 @@ namespace AllSalesApp.Views
             {
                 string query = @"SELECT NombreProducto,Precio
                                  FROM tblProductoD
-                                 WHERE Inventario > 0";
+                                 WHERE Inventario > 0 AND IDProductoH = @productoH";
 
                 SqlCommand cmd = new SqlCommand(query, conexion);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
+                cmd.Parameters.AddWithValue("@productoH", IDProductoHeader);
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
 
@@ -63,10 +86,12 @@ namespace AllSalesApp.Views
                 dataGridView1.RowHeadersVisible = false;
                 dataGridView1.AllowUserToAddRows = false;
                 dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 9.75F, FontStyle.Bold);
+
                 //Columna Tipo Cantidad
                 DataGridViewTextBoxColumn col4 = new DataGridViewTextBoxColumn();
                 col4.HeaderText = "Cantidad";
                 col4.Name = "Cantidad";
+                col4.DefaultCellStyle.NullValue = "1";
                 dataGridView1.Columns.Add(col4);
                 ColumnasNuevas();
 
@@ -121,10 +146,10 @@ namespace AllSalesApp.Views
                 bool isSelected = Convert.ToBoolean(row.Cells["chk"].FormattedValue);
                 if (isSelected)
                 {
-                    double precio = Convert.ToDouble(row.Cells["Precio"].Value) * Convert.ToDouble(row.Cells["Cantidad"].Value);
+                    double precio = Convert.ToDouble(row.Cells["Precio"].Value) * Convert.ToDouble(row.Cells["Cantidad"].FormattedValue);
                     double itbis = (precio) * Convert.ToDouble(0.18);
                     sumatoria += (precio + itbis);
-                    dataGridView2.Rows.Add((row.Cells["NombreProducto"].Value).ToString(), precio.ToString(), itbis.ToString(), row.Cells["Cantidad"].Value.ToString());
+                    dataGridView2.Rows.Add((row.Cells["NombreProducto"].Value).ToString(), precio.ToString(), itbis.ToString(), row.Cells["Cantidad"].FormattedValue);
                 }
             }
             labelTot.Visible = true;
@@ -134,50 +159,25 @@ namespace AllSalesApp.Views
         }
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dataGridView2.Rows.Clear();
-            GenerateList();
-        }
-
-        private void PedidosListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            if (String.IsNullOrWhiteSpace(comboBox1.Text))
+            {
+                MessageBox.Show("Elige algun cliente en el buscador", "Cliente No Elegido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                dataGridView2.Rows.Clear();
+                GenerateList();
+            }
         }
 
         private void CrearFacturabtn_Click(object sender, EventArgs e)
         {
             NuevaFactura();
+            MessageBox.Show("Factura Creada Exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void NuevaFactura()
@@ -199,12 +199,14 @@ namespace AllSalesApp.Views
                 int idpedidoh;
 
                 //Se Crea el header
-                string query1 = @"INSERT INTO tblPedidoH (IDVendedor,IDCliente)
-                                 VALUES (@idvendedor,@idcliente)";
+                string query1 = @"INSERT INTO tblPedidoH (IDVendedor,IDCliente,Fecha)
+                                 VALUES (@idvendedor,@idcliente,@fecha)";
+
                 using (SqlCommand command = new SqlCommand(query1, connection))
                 {
-                    command.Parameters.AddWithValue("@idvendedor", 1);
+                    command.Parameters.AddWithValue("@idvendedor", IDVendedor);
                     command.Parameters.AddWithValue("@idcliente", idcliente);
+                    command.Parameters.AddWithValue("@fecha", DateTime.Now);
 
                     connection.Open();
                     int result = command.ExecuteNonQuery();
@@ -246,9 +248,10 @@ namespace AllSalesApp.Views
 
                     using (SqlCommand command2 = new SqlCommand(query3, connection))
                     {
+
                         connection.Open();
                         command2.Parameters.AddWithValue("@cantidad", cantidad);
-                        command2.Parameters.AddWithValue("@itbis", itbis);
+                        command2.Parameters.AddWithValue("@itbis", Convert.ToDecimal(itbis));
                         command2.Parameters.AddWithValue("@idproductod", idprodctod);
                         command2.Parameters.AddWithValue("@idpedidoh", idpedidoh);
 
@@ -260,6 +263,7 @@ namespace AllSalesApp.Views
                             Console.WriteLine("Error inserting data into Database!");
                         }
                         connection.Close();
+
                     }
                 }
 

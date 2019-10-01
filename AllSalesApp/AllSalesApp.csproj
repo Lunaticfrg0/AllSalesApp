@@ -56,11 +56,35 @@
     <Compile Include="Services\LogInServices.cs" />
     <Compile Include="Services\Repository.cs" />
     <Compile Include="Utilities\ComboxManager.cs" />
+    <Compile Include="Views\Catalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Catalogo.Designer.cs">
+      <DependentUpon>Catalogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CrearCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\CrearCliente.Designer.cs">
       <DependentUpon>CrearCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CrearTienda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CrearTienda.Designer.cs">
+      <DependentUpon>CrearTienda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CrearVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CrearVendedor.Designer.cs">
+      <DependentUpon>CrearVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Menu.cs">
       <SubType>Form</SubType>
@@ -82,8 +106,26 @@
     <Compile Include="Views\Pedidos.Designer.cs">
       <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ReporteFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ReporteFactura.Designer.cs">
+      <DependentUpon>ReporteFactura.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\Catalogo.resx">
+      <DependentUpon>Catalogo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CrearCliente.resx">
       <DependentUpon>CrearCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrearTienda.resx">
+      <DependentUpon>CrearTienda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CrearVendedor.resx">
+      <DependentUpon>CrearVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -102,6 +144,9 @@
     </Compile>
     <EmbeddedResource Include="Views\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReporteFactura.resx">
+      <DependentUpon>ReporteFactura.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="AllSalesAppDataSet.xsc">
       <DependentUpon>AllSalesAppDataSet.xsd</DependentUpon>

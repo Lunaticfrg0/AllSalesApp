@@ -4371,7 +4371,7 @@ namespace AllSalesApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnIDVendedor = base.Columns["IDVendedor"];
-                this.columnNombreVendedor = base.Columns["NombreVendedor"];
+                this.columnNombreVendedor = base.Columns["NombreTienda"];
                 this.columnCedula = base.Columns["Cedula"];
                 this.columnFechaNacimiento = base.Columns["FechaNacimiento"];
                 this.columnTelefono = base.Columns["Telefono"];
@@ -4385,7 +4385,7 @@ namespace AllSalesApp {
             private void InitClass() {
                 this.columnIDVendedor = new global::System.Data.DataColumn("IDVendedor", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIDVendedor);
-                this.columnNombreVendedor = new global::System.Data.DataColumn("NombreVendedor", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnNombreVendedor = new global::System.Data.DataColumn("NombreTienda", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombreVendedor);
                 this.columnCedula = new global::System.Data.DataColumn("Cedula", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCedula);
@@ -9919,7 +9919,7 @@ SELECT IDTipoProducto, NombreTipoProducto FROM tblTipoProducto WHERE (IDTipoProd
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "tblVendedor";
             tableMapping.ColumnMappings.Add("IDVendedor", "IDVendedor");
-            tableMapping.ColumnMappings.Add("NombreVendedor", "NombreVendedor");
+            tableMapping.ColumnMappings.Add("NombreTienda", "NombreTienda");
             tableMapping.ColumnMappings.Add("Cedula", "Cedula");
             tableMapping.ColumnMappings.Add("FechaNacimiento", "FechaNacimiento");
             tableMapping.ColumnMappings.Add("Telefono", "Telefono");
@@ -9929,10 +9929,10 @@ SELECT IDTipoProducto, NombreTipoProducto FROM tblTipoProducto WHERE (IDTipoProd
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tblVendedor] WHERE (([IDVendedor] = @Original_IDVendedor) AND ([NombreVendedor] = @Original_NombreVendedor) AND ([Cedula] = @Original_Cedula) AND ([FechaNacimiento] = @Original_FechaNacimiento) AND ([Telefono] = @Original_Telefono) AND ([Correo] = @Original_Correo) AND ([idDireccion] = @Original_idDireccion) AND ([IDTienda] = @Original_IDTienda))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tblVendedor] WHERE (([IDVendedor] = @Original_IDVendedor) AND ([NombreTienda] = @Original_NombreVendedor) AND ([Cedula] = @Original_Cedula) AND ([FechaNacimiento] = @Original_FechaNacimiento) AND ([Telefono] = @Original_Telefono) AND ([Correo] = @Original_Correo) AND ([idDireccion] = @Original_idDireccion) AND ([IDTienda] = @Original_IDTienda))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDVendedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDVendedor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NombreVendedor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NombreVendedor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NombreVendedor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NombreTienda", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cedula", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaNacimiento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaNacimiento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefono", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -9941,10 +9941,10 @@ SELECT IDTipoProducto, NombreTipoProducto FROM tblTipoProducto WHERE (IDTipoProd
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDTienda", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDTienda", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tblVendedor] ([NombreVendedor], [Cedula], [FechaNacimiento], [Telefono], [Correo], [idDireccion], [IDTienda]) VALUES (@NombreVendedor, @Cedula, @FechaNacimiento, @Telefono, @Correo, @idDireccion, @IDTienda);
-SELECT IDVendedor, NombreVendedor, Cedula, FechaNacimiento, Telefono, Correo, idDireccion, IDTienda FROM tblVendedor WHERE (IDVendedor = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tblVendedor] ([NombreTienda], [Cedula], [FechaNacimiento], [Telefono], [Correo], [idDireccion], [IDTienda]) VALUES (@NombreTienda, @Cedula, @FechaNacimiento, @Telefono, @Correo, @idDireccion, @IDTienda);
+SELECT IDVendedor, NombreTienda, Cedula, FechaNacimiento, Telefono, Correo, idDireccion, IDTienda FROM tblVendedor WHERE (IDVendedor = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreVendedor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NombreVendedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreTienda", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NombreTienda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cedula", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaNacimiento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaNacimiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9953,10 +9953,10 @@ SELECT IDVendedor, NombreVendedor, Cedula, FechaNacimiento, Telefono, Correo, id
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDTienda", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDTienda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tblVendedor] SET [NombreVendedor] = @NombreVendedor, [Cedula] = @Cedula, [FechaNacimiento] = @FechaNacimiento, [Telefono] = @Telefono, [Correo] = @Correo, [idDireccion] = @idDireccion, [IDTienda] = @IDTienda WHERE (([IDVendedor] = @Original_IDVendedor) AND ([NombreVendedor] = @Original_NombreVendedor) AND ([Cedula] = @Original_Cedula) AND ([FechaNacimiento] = @Original_FechaNacimiento) AND ([Telefono] = @Original_Telefono) AND ([Correo] = @Original_Correo) AND ([idDireccion] = @Original_idDireccion) AND ([IDTienda] = @Original_IDTienda));
-SELECT IDVendedor, NombreVendedor, Cedula, FechaNacimiento, Telefono, Correo, idDireccion, IDTienda FROM tblVendedor WHERE (IDVendedor = @IDVendedor)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tblVendedor] SET [NombreTienda] = @NombreTienda, [Cedula] = @Cedula, [FechaNacimiento] = @FechaNacimiento, [Telefono] = @Telefono, [Correo] = @Correo, [idDireccion] = @idDireccion, [IDTienda] = @IDTienda WHERE (([IDVendedor] = @Original_IDVendedor) AND ([NombreTienda] = @Original_NombreVendedor) AND ([Cedula] = @Original_Cedula) AND ([FechaNacimiento] = @Original_FechaNacimiento) AND ([Telefono] = @Original_Telefono) AND ([Correo] = @Original_Correo) AND ([idDireccion] = @Original_idDireccion) AND ([IDTienda] = @Original_IDTienda));
+SELECT IDVendedor, NombreTienda, Cedula, FechaNacimiento, Telefono, Correo, idDireccion, IDTienda FROM tblVendedor WHERE (IDVendedor = @IDVendedor)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreVendedor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NombreVendedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NombreTienda", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NombreTienda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cedula", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FechaNacimiento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaNacimiento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Telefono", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9964,7 +9964,7 @@ SELECT IDVendedor, NombreVendedor, Cedula, FechaNacimiento, Telefono, Correo, id
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idDireccion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDireccion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDTienda", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDTienda", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDVendedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDVendedor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NombreVendedor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NombreVendedor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NombreVendedor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NombreTienda", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cedula", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FechaNacimiento", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FechaNacimiento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Telefono", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Telefono", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -9987,7 +9987,7 @@ SELECT IDVendedor, NombreVendedor, Cedula, FechaNacimiento, Telefono, Correo, id
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IDVendedor, NombreVendedor, Cedula, FechaNacimiento, Telefono, Correo, idD" +
+            this._commandCollection[0].CommandText = "SELECT IDVendedor, NombreTienda, Cedula, FechaNacimiento, Telefono, Correo, idD" +
                 "ireccion, IDTienda FROM dbo.tblVendedor";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
@@ -10100,7 +10100,7 @@ SELECT IDVendedor, NombreVendedor, Cedula, FechaNacimiento, Telefono, Correo, id
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(string NombreVendedor, string Cedula, System.DateTime FechaNacimiento, string Telefono, string Correo, int idDireccion, int IDTienda) {
             if ((NombreVendedor == null)) {
-                throw new global::System.ArgumentNullException("NombreVendedor");
+                throw new global::System.ArgumentNullException("NombreTienda");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(NombreVendedor));
@@ -10164,7 +10164,7 @@ SELECT IDVendedor, NombreVendedor, Cedula, FechaNacimiento, Telefono, Correo, id
                     int Original_IDTienda, 
                     int IDVendedor) {
             if ((NombreVendedor == null)) {
-                throw new global::System.ArgumentNullException("NombreVendedor");
+                throw new global::System.ArgumentNullException("NombreTienda");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(NombreVendedor));

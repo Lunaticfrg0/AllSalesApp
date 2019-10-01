@@ -10,12 +10,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		AllSalesApp\Views\CrearCliente.cs = AllSalesApp\Views\CrearCliente.cs
 		AllSalesApp\Views\CrearCliente.Designer.cs = AllSalesApp\Views\CrearCliente.Designer.cs
 		AllSalesApp\Views\CrearCliente.resx = AllSalesApp\Views\CrearCliente.resx
+		AllSalesApp\Views\CrearVendedor.cs = AllSalesApp\Views\CrearVendedor.cs
+		AllSalesApp\Views\CrearVendedor.Designer.cs = AllSalesApp\Views\CrearVendedor.Designer.cs
+		AllSalesApp\Views\CrearVendedor.resx = AllSalesApp\Views\CrearVendedor.resx
+		AllSalesApp\Views\Factura.cs = AllSalesApp\Views\Factura.cs
+		AllSalesApp\Views\Factura.Designer.cs = AllSalesApp\Views\Factura.Designer.cs
+		AllSalesApp\Views\Factura.resx = AllSalesApp\Views\Factura.resx
 		AllSalesApp\Views\Form1.cs = AllSalesApp\Views\Form1.cs
 		AllSalesApp\Views\Form1.Designer.cs = AllSalesApp\Views\Form1.Designer.cs
 		AllSalesApp\Views\Form1.resx = AllSalesApp\Views\Form1.resx
 		AllSalesApp\Views\LogIn.cs = AllSalesApp\Views\LogIn.cs
 		AllSalesApp\Views\LogIn.Designer.cs = AllSalesApp\Views\LogIn.Designer.cs
 		AllSalesApp\Views\LogIn.resx = AllSalesApp\Views\LogIn.resx
+		AllSalesApp\Views\ReporteFactura.cs = AllSalesApp\Views\ReporteFactura.cs
+		AllSalesApp\Views\ReporteFactura.Designer.cs = AllSalesApp\Views\ReporteFactura.Designer.cs
+		AllSalesApp\Views\ReporteFactura.resx = AllSalesApp\Views\ReporteFactura.resx
 	EndProjectSection
 EndProject
 Global
