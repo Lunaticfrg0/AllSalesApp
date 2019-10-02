@@ -19,6 +19,8 @@ namespace AllSalesApp
         CrearCliente clienteform;
         Catalogo catalogoform;
         Factura facturaform;
+        BorrarCliente borrarcliente;
+        ConfigurarCliente configcliente;
 
         public int idTienda;
         public int idVendedor;
@@ -81,6 +83,20 @@ namespace AllSalesApp
             facturaform = new Factura(idVendedor, idTienda);
             facturaform.MdiParent = this;
             facturaform.Show();
+        }
+
+        private void borrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            borrarcliente = new BorrarCliente();
+            borrarcliente.MdiParent = this;
+            borrarcliente.Show();
+        }
+
+        private void configurarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            configcliente = new ConfigurarCliente();
+            configcliente.MdiParent = this;
+            configcliente.Show();
         }
     }
 }

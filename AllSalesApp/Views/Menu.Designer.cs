@@ -33,6 +33,8 @@
             this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.catalogoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.borrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configurarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +48,9 @@
             this.pedidoToolStripMenuItem,
             this.facturaToolStripMenuItem,
             this.catalogoToolStripMenuItem,
-            this.crearClienteToolStripMenuItem});
+            this.crearClienteToolStripMenuItem,
+            this.borrarClienteToolStripMenuItem,
+            this.configurarClienteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -86,6 +90,20 @@
             this.crearClienteToolStripMenuItem.Text = "Crear Cliente";
             this.crearClienteToolStripMenuItem.Click += new System.EventHandler(this.crearClienteToolStripMenuItem_Click);
             // 
+            // borrarClienteToolStripMenuItem
+            // 
+            this.borrarClienteToolStripMenuItem.Name = "borrarClienteToolStripMenuItem";
+            this.borrarClienteToolStripMenuItem.Size = new System.Drawing.Size(158, 23);
+            this.borrarClienteToolStripMenuItem.Text = "Borrar Cliente";
+            this.borrarClienteToolStripMenuItem.Click += new System.EventHandler(this.borrarClienteToolStripMenuItem_Click);
+            // 
+            // configurarClienteToolStripMenuItem
+            // 
+            this.configurarClienteToolStripMenuItem.Name = "configurarClienteToolStripMenuItem";
+            this.configurarClienteToolStripMenuItem.Size = new System.Drawing.Size(158, 23);
+            this.configurarClienteToolStripMenuItem.Text = "Configurar Cliente";
+            this.configurarClienteToolStripMenuItem.Click += new System.EventHandler(this.configurarClienteToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,6 +128,8 @@
         private System.Windows.Forms.ToolStripMenuItem facturaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem catalogoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem borrarClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configurarClienteToolStripMenuItem;
     }
 }
 

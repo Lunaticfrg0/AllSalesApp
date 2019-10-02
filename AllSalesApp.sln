@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllSalesApp", "AllSalesApp\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4C82BE88-CBFC-4A2E-935A-762977EA046D}"
 	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\AllSalesApp\BorrarCliente.cs = ..\..\..\Desktop\AllSalesApp\BorrarCliente.cs
+		..\..\..\Desktop\AllSalesApp\BorrarCliente.Designer.cs = ..\..\..\Desktop\AllSalesApp\BorrarCliente.Designer.cs
+		..\..\..\Desktop\AllSalesApp\BorrarCliente.resx = ..\..\..\Desktop\AllSalesApp\BorrarCliente.resx
+		..\..\..\Desktop\AllSalesApp\ConfigurarCliente.cs = ..\..\..\Desktop\AllSalesApp\ConfigurarCliente.cs
+		..\..\..\Desktop\AllSalesApp\ConfigurarCliente.Designer.cs = ..\..\..\Desktop\AllSalesApp\ConfigurarCliente.Designer.cs
+		..\..\..\Desktop\AllSalesApp\ConfigurarCliente.resx = ..\..\..\Desktop\AllSalesApp\ConfigurarCliente.resx
 		AllSalesApp\Views\CrearCliente.cs = AllSalesApp\Views\CrearCliente.cs
 		AllSalesApp\Views\CrearCliente.Designer.cs = AllSalesApp\Views\CrearCliente.Designer.cs
 		AllSalesApp\Views\CrearCliente.resx = AllSalesApp\Views\CrearCliente.resx
