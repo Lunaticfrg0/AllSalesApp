@@ -270,5 +270,10 @@ namespace AllSalesApp.Views
 
             }
         }
+
+        private void Pedidos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

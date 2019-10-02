@@ -54,9 +54,10 @@
             // 
             this.Nombrelbl.AutoSize = true;
             this.Nombrelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nombrelbl.Location = new System.Drawing.Point(173, 97);
+            this.Nombrelbl.Location = new System.Drawing.Point(231, 119);
+            this.Nombrelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Nombrelbl.Name = "Nombrelbl";
-            this.Nombrelbl.Size = new System.Drawing.Size(162, 25);
+            this.Nombrelbl.Size = new System.Drawing.Size(204, 31);
             this.Nombrelbl.TabIndex = 0;
             this.Nombrelbl.Text = "Nombre cliente:";
             // 
@@ -64,9 +65,10 @@
             // 
             this.ApellidoClientelbl.AutoSize = true;
             this.ApellidoClientelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApellidoClientelbl.Location = new System.Drawing.Point(173, 132);
+            this.ApellidoClientelbl.Location = new System.Drawing.Point(231, 162);
+            this.ApellidoClientelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ApellidoClientelbl.Name = "ApellidoClientelbl";
-            this.ApellidoClientelbl.Size = new System.Drawing.Size(164, 25);
+            this.ApellidoClientelbl.Size = new System.Drawing.Size(204, 31);
             this.ApellidoClientelbl.TabIndex = 1;
             this.ApellidoClientelbl.Text = "Apellido cliente:";
             // 
@@ -74,9 +76,10 @@
             // 
             this.CedulaClientelbl.AutoSize = true;
             this.CedulaClientelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CedulaClientelbl.Location = new System.Drawing.Point(173, 167);
+            this.CedulaClientelbl.Location = new System.Drawing.Point(231, 206);
+            this.CedulaClientelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CedulaClientelbl.Name = "CedulaClientelbl";
-            this.CedulaClientelbl.Size = new System.Drawing.Size(86, 25);
+            this.CedulaClientelbl.Size = new System.Drawing.Size(108, 31);
             this.CedulaClientelbl.TabIndex = 2;
             this.CedulaClientelbl.Text = "Cedula:";
             // 
@@ -84,9 +87,10 @@
             // 
             this.TelefonoClientelbl.AutoSize = true;
             this.TelefonoClientelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TelefonoClientelbl.Location = new System.Drawing.Point(173, 202);
+            this.TelefonoClientelbl.Location = new System.Drawing.Point(231, 249);
+            this.TelefonoClientelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TelefonoClientelbl.Name = "TelefonoClientelbl";
-            this.TelefonoClientelbl.Size = new System.Drawing.Size(102, 25);
+            this.TelefonoClientelbl.Size = new System.Drawing.Size(128, 31);
             this.TelefonoClientelbl.TabIndex = 3;
             this.TelefonoClientelbl.Text = "Teléfono:";
             // 
@@ -94,9 +98,10 @@
             // 
             this.CorreoClientelbl.AutoSize = true;
             this.CorreoClientelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CorreoClientelbl.Location = new System.Drawing.Point(173, 241);
+            this.CorreoClientelbl.Location = new System.Drawing.Point(231, 297);
+            this.CorreoClientelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CorreoClientelbl.Name = "CorreoClientelbl";
-            this.CorreoClientelbl.Size = new System.Drawing.Size(83, 25);
+            this.CorreoClientelbl.Size = new System.Drawing.Size(105, 31);
             this.CorreoClientelbl.TabIndex = 4;
             this.CorreoClientelbl.Text = "Correo:";
             // 
@@ -104,50 +109,56 @@
             // 
             this.Direccionlbl.AutoSize = true;
             this.Direccionlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Direccionlbl.Location = new System.Drawing.Point(745, 18);
+            this.Direccionlbl.Location = new System.Drawing.Point(993, 22);
+            this.Direccionlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Direccionlbl.Name = "Direccionlbl";
-            this.Direccionlbl.Size = new System.Drawing.Size(108, 25);
+            this.Direccionlbl.Size = new System.Drawing.Size(136, 31);
             this.Direccionlbl.TabIndex = 5;
             this.Direccionlbl.Text = "Dirección:";
             // 
             // NombreClientetxt
             // 
             this.NombreClientetxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreClientetxt.Location = new System.Drawing.Point(341, 93);
+            this.NombreClientetxt.Location = new System.Drawing.Point(455, 114);
+            this.NombreClientetxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NombreClientetxt.Name = "NombreClientetxt";
-            this.NombreClientetxt.Size = new System.Drawing.Size(152, 29);
+            this.NombreClientetxt.Size = new System.Drawing.Size(201, 34);
             this.NombreClientetxt.TabIndex = 6;
             // 
             // ApellidoClientetxt
             // 
             this.ApellidoClientetxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApellidoClientetxt.Location = new System.Drawing.Point(341, 132);
+            this.ApellidoClientetxt.Location = new System.Drawing.Point(455, 162);
+            this.ApellidoClientetxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ApellidoClientetxt.Name = "ApellidoClientetxt";
-            this.ApellidoClientetxt.Size = new System.Drawing.Size(152, 29);
+            this.ApellidoClientetxt.Size = new System.Drawing.Size(201, 34);
             this.ApellidoClientetxt.TabIndex = 7;
             // 
             // Cedulatxt
             // 
             this.Cedulatxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cedulatxt.Location = new System.Drawing.Point(341, 167);
+            this.Cedulatxt.Location = new System.Drawing.Point(455, 206);
+            this.Cedulatxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Cedulatxt.Name = "Cedulatxt";
-            this.Cedulatxt.Size = new System.Drawing.Size(152, 29);
+            this.Cedulatxt.Size = new System.Drawing.Size(201, 34);
             this.Cedulatxt.TabIndex = 8;
             // 
             // Telefonotxt
             // 
             this.Telefonotxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Telefonotxt.Location = new System.Drawing.Point(341, 202);
+            this.Telefonotxt.Location = new System.Drawing.Point(455, 249);
+            this.Telefonotxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Telefonotxt.Name = "Telefonotxt";
-            this.Telefonotxt.Size = new System.Drawing.Size(152, 29);
+            this.Telefonotxt.Size = new System.Drawing.Size(201, 34);
             this.Telefonotxt.TabIndex = 9;
             // 
             // Correotxt
             // 
             this.Correotxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Correotxt.Location = new System.Drawing.Point(341, 239);
+            this.Correotxt.Location = new System.Drawing.Point(455, 294);
+            this.Correotxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Correotxt.Name = "Correotxt";
-            this.Correotxt.Size = new System.Drawing.Size(152, 29);
+            this.Correotxt.Size = new System.Drawing.Size(201, 34);
             this.Correotxt.TabIndex = 10;
             // 
             // ProvinciacomboBox
@@ -155,18 +166,20 @@
             this.ProvinciacomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ProvinciacomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProvinciacomboBox.FormattingEnabled = true;
-            this.ProvinciacomboBox.Location = new System.Drawing.Point(750, 95);
+            this.ProvinciacomboBox.Location = new System.Drawing.Point(1000, 117);
+            this.ProvinciacomboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ProvinciacomboBox.Name = "ProvinciacomboBox";
-            this.ProvinciacomboBox.Size = new System.Drawing.Size(168, 32);
+            this.ProvinciacomboBox.Size = new System.Drawing.Size(223, 37);
             this.ProvinciacomboBox.TabIndex = 11;
             // 
             // Provincialbl
             // 
             this.Provincialbl.AutoSize = true;
             this.Provincialbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Provincialbl.Location = new System.Drawing.Point(646, 95);
+            this.Provincialbl.Location = new System.Drawing.Point(861, 117);
+            this.Provincialbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Provincialbl.Name = "Provincialbl";
-            this.Provincialbl.Size = new System.Drawing.Size(92, 24);
+            this.Provincialbl.Size = new System.Drawing.Size(118, 29);
             this.Provincialbl.TabIndex = 12;
             this.Provincialbl.Text = "Provincia:";
             // 
@@ -174,9 +187,10 @@
             // 
             this.Sectorlbl.AutoSize = true;
             this.Sectorlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sectorlbl.Location = new System.Drawing.Point(650, 137);
+            this.Sectorlbl.Location = new System.Drawing.Point(867, 169);
+            this.Sectorlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Sectorlbl.Name = "Sectorlbl";
-            this.Sectorlbl.Size = new System.Drawing.Size(74, 24);
+            this.Sectorlbl.Size = new System.Drawing.Size(95, 29);
             this.Sectorlbl.TabIndex = 14;
             this.Sectorlbl.Text = "Sector: ";
             // 
@@ -184,35 +198,38 @@
             // 
             this.Callelbl.AutoSize = true;
             this.Callelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Callelbl.Location = new System.Drawing.Point(650, 181);
+            this.Callelbl.Location = new System.Drawing.Point(867, 223);
+            this.Callelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Callelbl.Name = "Callelbl";
-            this.Callelbl.Size = new System.Drawing.Size(62, 24);
+            this.Callelbl.Size = new System.Drawing.Size(81, 29);
             this.Callelbl.TabIndex = 15;
             this.Callelbl.Text = "Calle: ";
             // 
             // Calletxt
             // 
             this.Calletxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calletxt.Location = new System.Drawing.Point(750, 181);
+            this.Calletxt.Location = new System.Drawing.Point(1000, 223);
+            this.Calletxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Calletxt.Name = "Calletxt";
-            this.Calletxt.Size = new System.Drawing.Size(168, 29);
+            this.Calletxt.Size = new System.Drawing.Size(223, 34);
             this.Calletxt.TabIndex = 16;
             // 
             // Sectortxt
             // 
             this.Sectortxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sectortxt.Location = new System.Drawing.Point(750, 137);
+            this.Sectortxt.Location = new System.Drawing.Point(1000, 169);
+            this.Sectortxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Sectortxt.Name = "Sectortxt";
-            this.Sectortxt.Size = new System.Drawing.Size(168, 29);
+            this.Sectortxt.Size = new System.Drawing.Size(223, 34);
             this.Sectortxt.TabIndex = 17;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(397, 353);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(529, 434);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(274, 41);
+            this.button1.Size = new System.Drawing.Size(365, 50);
             this.button1.TabIndex = 18;
             this.button1.Text = "Crear cliente";
             this.button1.UseVisualStyleBackColor = true;
@@ -221,26 +238,28 @@
             // Numerotxt
             // 
             this.Numerotxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Numerotxt.Location = new System.Drawing.Point(750, 224);
+            this.Numerotxt.Location = new System.Drawing.Point(1000, 276);
+            this.Numerotxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Numerotxt.Name = "Numerotxt";
-            this.Numerotxt.Size = new System.Drawing.Size(168, 29);
+            this.Numerotxt.Size = new System.Drawing.Size(223, 34);
             this.Numerotxt.TabIndex = 20;
             // 
             // Numerolbl
             // 
             this.Numerolbl.AutoSize = true;
             this.Numerolbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Numerolbl.Location = new System.Drawing.Point(650, 226);
+            this.Numerolbl.Location = new System.Drawing.Point(867, 278);
+            this.Numerolbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Numerolbl.Name = "Numerolbl";
-            this.Numerolbl.Size = new System.Drawing.Size(89, 24);
+            this.Numerolbl.Size = new System.Drawing.Size(112, 29);
             this.Numerolbl.TabIndex = 19;
             this.Numerolbl.Text = "Numero: ";
             // 
             // CrearCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1059, 526);
+            this.ClientSize = new System.Drawing.Size(1412, 647);
             this.Controls.Add(this.Numerotxt);
             this.Controls.Add(this.Numerolbl);
             this.Controls.Add(this.button1);
@@ -262,6 +281,7 @@
             this.Controls.Add(this.ApellidoClientelbl);
             this.Controls.Add(this.Nombrelbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CrearCliente";
             this.Text = "Crear cliente";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

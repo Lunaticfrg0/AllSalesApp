@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvFacturas = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -48,10 +48,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(218, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(291, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 55);
+            this.label1.Size = new System.Drawing.Size(263, 69);
             this.label1.TabIndex = 0;
             this.label1.Text = "Facturas";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -69,24 +68,25 @@
             this.dgvFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFacturas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnEliminar});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFacturas.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvFacturas.Location = new System.Drawing.Point(18, 183);
-            this.dgvFacturas.Margin = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFacturas.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvFacturas.Location = new System.Drawing.Point(24, 225);
+            this.dgvFacturas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvFacturas.Name = "dgvFacturas";
             this.dgvFacturas.ReadOnly = true;
             this.dgvFacturas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvFacturas.RowTemplate.Height = 24;
             this.dgvFacturas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFacturas.Size = new System.Drawing.Size(1030, 317);
+            this.dgvFacturas.Size = new System.Drawing.Size(1373, 390);
             this.dgvFacturas.TabIndex = 9;
             this.dgvFacturas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvFacturas_CellClick);
+            this.dgvFacturas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFacturas_CellContentClick);
             this.dgvFacturas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvFacturas_CellDoubleClick_1);
             this.dgvFacturas.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvFacturas_CellMouseLeave);
             // 
@@ -96,16 +96,15 @@
             this.btnEliminar.MinimumWidth = 10;
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.ReadOnly = true;
-            this.btnEliminar.Width = 49;
+            this.btnEliminar.Width = 64;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 108);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(17, 133);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 26);
+            this.label2.Size = new System.Drawing.Size(99, 31);
             this.label2.TabIndex = 10;
             this.label2.Text = "Cliente";
             // 
@@ -114,10 +113,10 @@
             this.cboBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBuscar.FormattingEnabled = true;
-            this.cboBuscar.Location = new System.Drawing.Point(109, 104);
-            this.cboBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.cboBuscar.Location = new System.Drawing.Point(145, 128);
+            this.cboBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboBuscar.Name = "cboBuscar";
-            this.cboBuscar.Size = new System.Drawing.Size(203, 34);
+            this.cboBuscar.Size = new System.Drawing.Size(269, 39);
             this.cboBuscar.TabIndex = 16;
             // 
             // allSalesAppDataSet
@@ -133,10 +132,10 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(369, 104);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Location = new System.Drawing.Point(492, 128);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(94, 31);
+            this.btnBuscar.Size = new System.Drawing.Size(125, 38);
             this.btnBuscar.TabIndex = 17;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -145,17 +144,16 @@
             // Msg
             // 
             this.Msg.AutoSize = true;
-            this.Msg.Location = new System.Drawing.Point(428, 183);
-            this.Msg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Msg.Location = new System.Drawing.Point(571, 225);
             this.Msg.Name = "Msg";
-            this.Msg.Size = new System.Drawing.Size(0, 13);
+            this.Msg.Size = new System.Drawing.Size(0, 17);
             this.Msg.TabIndex = 18;
             // 
             // Factura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1059, 526);
+            this.ClientSize = new System.Drawing.Size(1412, 647);
             this.Controls.Add(this.Msg);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.cboBuscar);
@@ -163,10 +161,13 @@
             this.Controls.Add(this.dgvFacturas);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Factura";
             this.Text = "Factura";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Factura_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.allSalesAppDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.allSalesApplbindingSource)).EndInit();

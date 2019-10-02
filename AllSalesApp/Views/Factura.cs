@@ -179,7 +179,7 @@ namespace AllSalesApp.Views
         {
             using (SqlConnection conexion = new SqlConnection(connstring))
             {
-                string query = @"SELECT dbo.tblPedidoH.IDPedidoH, dbo.tblCliente.NombreCliente, dbo.tblVendedor.NombreTienda, dbo.tblTienda.NombreTienda, dbo.tblPedidoD.Cantidad, dbo.tblPedidoD.ITBIS, dbo.tblProductoD.NombreProducto, dbo.tblProductoD.Precio, dbo.tblTienda.Direccion, dbo.tblPedidoH.Fecha
+                string query = @"SELECT dbo.tblPedidoH.IDPedidoH, dbo.tblCliente.NombreCliente, dbo.tblTienda.NombreTienda, dbo.tblPedidoD.Cantidad, dbo.tblPedidoD.ITBIS, dbo.tblProductoD.NombreProducto, dbo.tblProductoD.Precio, dbo.tblTienda.Direccion, dbo.tblPedidoH.Fecha
                                  FROM  dbo.tblCliente INNER JOIN
                                  dbo.tblPedidoH ON dbo.tblCliente.IDCliente = dbo.tblPedidoH.IDCliente INNER JOIN
                                  dbo.tblVendedor ON dbo.tblPedidoH.IDVendedor = dbo.tblVendedor.IDVendedor INNER JOIN
@@ -203,9 +203,7 @@ namespace AllSalesApp.Views
             double itbis;
 
             nombre = dgvFacturas.Rows[e.RowIndex].Cells["NombreCliente"].Value.ToString();
-            rf.lblCliente.Text = nombre;
-            nombre = dgvFacturas.Rows[e.RowIndex].Cells["NombreTienda"].Value.ToString();
-            rf.lblTienda.Text = nombre;
+            rf.lblCliente.Text = nombre;            
             nombre = dgvFacturas.Rows[e.RowIndex].Cells["NombreTienda"].Value.ToString();
             rf.lblVendedor.Text = nombre;
             nombre = dgvFacturas.Rows[e.RowIndex].Cells["Direccion"].Value.ToString();
@@ -243,6 +241,16 @@ namespace AllSalesApp.Views
                     CargarPedido();
                 }
             }
+        }
+
+        private void Factura_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvFacturas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

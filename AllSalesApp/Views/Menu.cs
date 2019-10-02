@@ -56,6 +56,7 @@ namespace AllSalesApp
         }
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
+            
         }
         private void pedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {

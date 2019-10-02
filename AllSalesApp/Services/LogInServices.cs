@@ -13,7 +13,7 @@ namespace AllSalesApp.Services
         public bool ValidaLogIn(LogInVendedor logIn)
         {
             bool rs = false;
-            SqlConnection oConnection = new SqlConnection(@"Server=localhost;Data Source=DESKTOP-US09U7O\SQLEXPRESS;Database=AllSalesApp;Integrated Security=SSPI");
+            SqlConnection oConnection = new SqlConnection(@"Server=localhost;Data Source=LAPTOP-RS890769\SQLEXPRESS;Database=AllSalesApp;Integrated Security=SSPI");
 
             if (oConnection.State != System.Data.ConnectionState.Open)
             {

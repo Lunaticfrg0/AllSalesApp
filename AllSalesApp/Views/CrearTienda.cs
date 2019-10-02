@@ -14,20 +14,18 @@ namespace AllSalesApp.Views
 {
     public partial class CrearTienda : Form
     {
-        public CrearTienda()
-        {
-            InitializeComponent();
-            ComboxManager.Manager(ref ProvinciacomboBox, "SELECT [NombreProvincia],[IDProvincia] FROM[AllSalesApp].[dbo].[tblProvincia]");
-        }
-
         public string NombreTienda { get { return this.NombreTiendatxt.Text; } }
         public string Telefono { get { return this.TelefonoTiendatxt.Text; } }
         public string Provincia { get { return ProvinciacomboBox.SelectedItem.ToString(); } }
+        public string PaginaWeb { get { return PaginaWebtxt.Text; } }
+        public string Correo { get { return CorreoTiendatxt.Text; } }
         public string Direccion { get { return Sectortxt.Text + ", " + Calletxt.Text + ", " + Numerotxt.Text; } }
-
-        private void CrearTienda_Load(object sender, EventArgs e)
+        
+   
+        public CrearTienda()
         {
-            ComboxManager.Manager(ref ProvinciacomboBox, "SELECT [NombreProvincia],[IDProvincia] FROM[AllSalesApp].[dbo].[tblProvincia]");
+            InitializeComponent();
+            
         }
 
         public int GetIdFromName(string Name)
@@ -53,9 +51,10 @@ namespace AllSalesApp.Views
 
             func(Controls);
         }
-
+        
         private void CrearTiendabtn_Click(object sender, EventArgs e)
         {
+
             if (NombreTiendatxt.Text == string.Empty ||
                TelefonoTiendatxt.Text == string.Empty || CorreoTiendatxt.Text == string.Empty || Sectortxt.Text == string.Empty
                || Calletxt.Text == string.Empty || Numerotxt.Text == string.Empty)
@@ -65,7 +64,7 @@ namespace AllSalesApp.Views
 
                 return;
             }
-
+      
             int Idprovincia = GetIdFromName(Provincia);
 
             SqlConnection oConnection = new SqlConnection(@"Server=localhost;Data Source=LAPTOP-RS890769\SQLEXPRESS;Database=AllSalesApp;Integrated Security=SSPI");
@@ -77,16 +76,17 @@ namespace AllSalesApp.Views
             SqlParameter paramNom = new SqlParameter("@NombreTienda", NombreTienda);
             SqlParameter paramTel = new SqlParameter("@Telefono", Telefono);
             SqlParameter paramDire = new SqlParameter("@Direccion", Direccion);
+            SqlParameter paramWeb = new SqlParameter("@PaginaWeb", PaginaWeb);
             SqlParameter paramProv = new SqlParameter("@IdProvincia", Idprovincia);
-            SqlParameter paramCorreo = new SqlParameter("@Correo", CorreoTiendatxt.ToString());
-            SqlParameter paramweb = new SqlParameter("@PaginaWeb", PaginaWebtxt.ToString());
+            SqlParameter paramCorreo = new SqlParameter("@Correo", Correo);
+            
 
 
             try
             {
 
                 string sql = "INSERT INTO[dbo].[tblTienda]([NombreTienda],[TelefonoTienda],[Correo],[PaginaWeb]" +
-                    ",[Direccion],[IDProvincia]) " +
+                                                         ",[Direccion],[IDProvincia]) " +
                      "VALUES (@NombreTienda, @Telefono, @Correo,@PaginaWeb,@Direccion, @IdProvincia)";
 
                 SqlCommand oCommand = new SqlCommand();
@@ -96,7 +96,7 @@ namespace AllSalesApp.Views
                 oCommand.Parameters.Add(paramNom);
                 oCommand.Parameters.Add(paramTel);
                 oCommand.Parameters.Add(paramCorreo);
-                oCommand.Parameters.Add(paramweb);
+                oCommand.Parameters.Add(paramWeb);
                 oCommand.Parameters.Add(paramProv);
                 oCommand.Parameters.Add(paramDire);
                 oCommand.ExecuteNonQuery();
@@ -111,6 +111,11 @@ namespace AllSalesApp.Views
                 throw new Exception(EX.Message);
 
             }
+        }
+
+        private void CrearTienda_Load_1(object sender, EventArgs e)
+        {
+            ComboxManager.Manager(ref ProvinciacomboBox, "SELECT [NombreProvincia],[IDProvincia] FROM[AllSalesApp].[dbo].[tblProvincia]");
         }
     }
 }

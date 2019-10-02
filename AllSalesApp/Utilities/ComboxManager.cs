@@ -14,7 +14,7 @@ namespace AllSalesApp.Utilities
         {
             Dictionary<string, string> dic = new Dictionary<string, string>();
 
-            SqlConnection oConnection = new SqlConnection(@"Server=localhost;Data Source=DESKTOP-US09U7O\SQLEXPRESS;Database=AllSalesApp;Integrated Security=SSPI");
+            SqlConnection oConnection = new SqlConnection(@"Server=localhost;Data Source=LAPTOP-RS890769\SQLEXPRESS;Database=AllSalesApp;Integrated Security=SSPI");
 
             if (oConnection.State != System.Data.ConnectionState.Open)
             {

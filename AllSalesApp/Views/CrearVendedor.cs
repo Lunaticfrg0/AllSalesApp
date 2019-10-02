@@ -82,7 +82,7 @@ namespace AllSalesApp.Views
             try
             {
 
-                string sql = "INSERT INTO[dbo].[tblVendedor]([NombreTienda],[Cedula],[FechaNacimiento],[Telefono],[Correo]" +
+                string sql = "INSERT INTO[dbo].[tblVendedor]([NombreVendedor],[Cedula],[FechaNacimiento],[Telefono],[Correo]" +
                     ",[Direccion],[IDProvincia],[IDTienda],[Password]) " +
                      "VALUES (@NombreCompleto, @Cedula,@FechaNacimiento, @Telefono, @Correo,@Direccion, @IdProvincia, @IDTienda, @Password)";
 

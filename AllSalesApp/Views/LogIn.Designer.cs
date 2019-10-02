@@ -40,10 +40,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 69);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(80, 85);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 26);
+            this.label1.Size = new System.Drawing.Size(114, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cedula:";
             // 
@@ -51,39 +50,38 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(60, 138);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(80, 170);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 26);
+            this.label2.Size = new System.Drawing.Size(170, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Contraseña:";
             // 
             // Cedulatxt
             // 
             this.Cedulatxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cedulatxt.Location = new System.Drawing.Point(214, 76);
-            this.Cedulatxt.Margin = new System.Windows.Forms.Padding(2);
+            this.Cedulatxt.Location = new System.Drawing.Point(285, 94);
+            this.Cedulatxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Cedulatxt.Name = "Cedulatxt";
-            this.Cedulatxt.Size = new System.Drawing.Size(200, 28);
+            this.Cedulatxt.Size = new System.Drawing.Size(265, 34);
             this.Cedulatxt.TabIndex = 2;
             // 
             // Passwordtxt
             // 
             this.Passwordtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Passwordtxt.Location = new System.Drawing.Point(214, 138);
-            this.Passwordtxt.Margin = new System.Windows.Forms.Padding(2);
+            this.Passwordtxt.Location = new System.Drawing.Point(285, 170);
+            this.Passwordtxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Passwordtxt.Name = "Passwordtxt";
             this.Passwordtxt.PasswordChar = '*';
-            this.Passwordtxt.Size = new System.Drawing.Size(200, 28);
+            this.Passwordtxt.Size = new System.Drawing.Size(265, 34);
             this.Passwordtxt.TabIndex = 3;
             // 
             // Exitbtn
             // 
             this.Exitbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Exitbtn.Location = new System.Drawing.Point(98, 236);
-            this.Exitbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.Exitbtn.Location = new System.Drawing.Point(131, 290);
+            this.Exitbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Exitbtn.Name = "Exitbtn";
-            this.Exitbtn.Size = new System.Drawing.Size(82, 32);
+            this.Exitbtn.Size = new System.Drawing.Size(109, 39);
             this.Exitbtn.TabIndex = 4;
             this.Exitbtn.Text = "Salir";
             this.Exitbtn.UseVisualStyleBackColor = true;
@@ -92,10 +90,10 @@
             // LogInbtn
             // 
             this.LogInbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogInbtn.Location = new System.Drawing.Point(295, 236);
-            this.LogInbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.LogInbtn.Location = new System.Drawing.Point(393, 290);
+            this.LogInbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LogInbtn.Name = "LogInbtn";
-            this.LogInbtn.Size = new System.Drawing.Size(82, 32);
+            this.LogInbtn.Size = new System.Drawing.Size(109, 39);
             this.LogInbtn.TabIndex = 5;
             this.LogInbtn.Text = "Log In";
             this.LogInbtn.UseVisualStyleBackColor = true;
@@ -103,16 +101,17 @@
             // 
             // LogIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 319);
+            this.ClientSize = new System.Drawing.Size(635, 393);
             this.Controls.Add(this.LogInbtn);
             this.Controls.Add(this.Exitbtn);
             this.Controls.Add(this.Passwordtxt);
             this.Controls.Add(this.Cedulatxt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "LogIn";
             this.Text = "Log In";
             this.Load += new System.EventHandler(this.LogIn_Load);

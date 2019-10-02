@@ -168,9 +168,26 @@ namespace AllSalesApp.Views
                 i++;
             }
         }
-        private void button3_Click(object sender, EventArgs e)
+     
+
+        private void Catalogo_Load(object sender, EventArgs e)
         {
-            ListarTipoProducto();
+
+        }
+
+        private void Titulo2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

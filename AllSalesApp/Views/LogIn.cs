@@ -62,12 +62,14 @@ namespace AllSalesApp.Views
             if (acceso == 1) 
             {
                     CrearVendedor crearVendedor = new CrearVendedor();
+                ClearTextBoxes();
                     crearVendedor.Show();
             }
 
             if (acceso == 2)
             {
                 CrearTienda crearTienda = new CrearTienda();
+                ClearTextBoxes();
                 crearTienda.Show();
             }
 
@@ -101,6 +103,21 @@ namespace AllSalesApp.Views
         private void Exitbtn_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        private void ClearTextBoxes()
+        {
+            Action<Control.ControlCollection> func = null;
+
+            func = (controls) =>
+            {
+                foreach (Control control in controls)
+                    if (control is TextBox)
+                        (control as TextBox).Clear();
+                    else
+                        func(control.Controls);
+            };
+
+            func(Controls);
         }
     }
 }
