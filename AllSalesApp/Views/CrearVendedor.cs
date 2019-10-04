@@ -24,7 +24,7 @@ namespace AllSalesApp.Views
         public string NombreCompleto { get { return this.NombreVendedor + " " + ApellidoVendedor; } }
         public string Cedula { get { return this.CedulaVendedortxt.Text; } }
         public string Telefono { get { return this.TelefonoVendedortxt.Text; } }
-        public string Correo { get { return this.CedulaVendedortxt.Text; } }
+        public string Correo { get { return this.CorreoVendedortxt.Text; } }
         public DateTime FechaVendedor { get { return DateTime.ParseExact(FechaVendedorPicker.Text, "yyyy-MM-dd", null); } }
         public string Provincia { get { return ProvinciacomboBox.SelectedItem.ToString(); } } 
         public string Direccion { get { return Sectortxt.Text + ", " + Calletxt.Text + ", " + Numerotxt.Text; } }
